@@ -2,11 +2,12 @@ multi:
 Ceux qui s'occupe de cette partie devront implémenter en C# le 
 fait de pouvoir jouer à notre jeu à plusieurs. Pour se faire nous
 utiliserons photon qui est une librairie C#.
+
 site internet:
 Pour créer un site internet nous utiliserons un framework tel que
 ruby on rail ou angular js. Nous y présenterons et mettrons à
-disposition notre jeu.
- 
+disposition notre jeu. Nous nous aiderons d'autres sites web et *de cours pour pouvoir le réaliser.
+
 graphisme et son:
 Les personnes qui s'occupent de cette partie s'occuperont de
 toute la partie visuelle du jeu. Ils utiliseront blender pour la
@@ -14,5 +15,9 @@ la partie visuelle. Pour la parie audio, ils utiliseront peut des
 des instruments diverses (guitare, batterie...) ou simplement
 leurs voies. Ils utiliseront aussi des logiciels de montage tel
 que (à compléter).
-code unity:
 
+code unity:
+Cette partie a pour but de réaliser toute la partie logique du
+jeu. En effet, ceux qui feront cette partie seront en charge
+d'implémenter la physique du jeu, les menus, les gestion de tous les éléments qui doivent apparaître à l'écrans... Nous
+utiliserons le C# avec la plateforme Unity.
