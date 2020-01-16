@@ -1,5 +1,22 @@
 \documentclass[12pt]{report}
+\usepackage[french]{babel}
 \usepackage{graphicx}
+\usepackage{geometry}
+\geometry{hmargin=2.5cm,vmargin=2.5cm}
+\usepackage{fancyhdr}
+\fancypagestyle{IHA-fancy-style}{%
+\fancyhf{} %Clear header and footer
+\lhead{\chaptername\ \thechapter }
+\rhead{Dungeon Race}
+\fancyfoot[C]{\thepage/13} %Custom footer
+\renewcommand{\headrulewidth}{0.4pt} %Line at the header visible
+\renewcommand{\footrulewidth}{0.4pt}}
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[C]{\thepage/13}%
+  \renewcommand{\headrulewidth}{0pt}% Line at the header invisible
+  \renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
+}
 \title{\huge Cahier des charges \\ \LARGE Studio Run\\ \large Projet : Dungeon Race}
 \date{}
 \author{\small Thibault THOMAS \\ \small Thomas PHILIP \\ \small Alan GUERET \\ \small Théo DARONAT}
@@ -9,7 +26,7 @@
 \maketitle
 \end{figure}
 \tableofcontents
-
+\pagestyle{IHA-fancy-style}
 \pagebreak
 \chapter{Introduction}
 \paragraph{}
@@ -61,7 +78,7 @@ Ce projet est très important à mon avis. Il nous permet d'avoir une première 
 		
 		\subsection{Thomas PHILIP}
 		\paragraph{}
-			J'ai passé un BAC S spécialité mathématique, en vu de pouvoir faire des études en programmation. Au collège, j'ai effectué un stage à l'ISART Digital, m'initiant ainsi à la programmation et me créant aussi une certaine passion pour ce domaine. Par la suite j'ai effectué plusieurs stages consistant, pour la plupart, à créer des jeux vidéo. Mon plus gros projet s'est déroulé sur un mois, dans ce projet j'ai été désigné chef de projet avec un camarade à la tête d'un groupe de trente personnes afin de créer un jeu sur Unreal Engine sans s'aider des différentes bibliothèques existantes (code source, graphisme, animation, son, etc …). Ces différentes expériences m'ont poussées à étudier l'informatique, et ainsi m'ont incitées à rejoindre l'EPITA.
+			J'ai passé un BAC S spécialité mathématique, en vu de pouvoir faire des études en programmation. Au collège, j'ai effectué un stage à l'ISART Digital, m'initiant ainsi à la programmation et me créant aussi une certaine passion pour ce domaine. Par la suite j'ai effectué plusieurs stages consistant, pour la plupart, à créer des jeux vidéo. Mon plus gros projet s'est déroulé sur un mois, dans ce projet j'ai été désigné chef de projet avec un camarade à la tête d'un groupe de trente personnes afin de créer un jeu sur Unreal Engine sans s'aider des différentes bibliothèques existantes (code source, graphisme, animation, son, etc …). Ces différentes expériences m'ont poussées à étudier l'informatique, et ainsi m'ont incitées à rejoindre l'EPITA.\\
 			
 Personnellement ce projet peut m'apporter énormément, en effet étant suppléant dans les domaines du graphisme et du son, je pourrai découvrir un aspect du jeu vidéo que l'on oublie souvent. Cela me permettra de m'initier à la modélisation 3D ainsi qu'au traitement de piste audio. Ensuite, mon rôle de responsable dans la programmation me permettra d'améliorer mes compétences actuelles dans ce domaine ; ayant déjà utilisé Unity pour d'autres projets d'ampleurs différentes, j'espère aiguiser mes connaissances et découvrir de nouvelles manières d'approcher ce logiciel. Enfin j'espère pouvoir apporter  mon expérience à mon équipe tout en développant mes qualités d'expression.
 
@@ -129,14 +146,12 @@ Lors d'une partie, certains obstacles (activés ou non par le "maître du jeu") 
 		\paragraph{}
 Ceux qui s'occupent de cette partie devront implémenter en C\# le 
 fait de pouvoir jouer notre jeu à plusieurs. Pour se faire nous
-utiliserons photon qui est une librairie C\#. 
+utiliserons photon qui est une bibliothèque C\#. 
 
 		\subsection{Site Internet}
 		\paragraph{}
-Pour créer un site internet nous utiliserons un framework tel que
-ruby on rail ou angular js. Nous y présenterons et mettrons à
-disposition notre jeu. Nous nous aiderons d'autres sites web et 
-de cours pour pouvoir le réaliser.
+Pour créer un site internet nous utiliserons un framework tel que angular js. Nous y présenterons et mettrons à
+disposition notre jeu. Nous nous aiderons d'autres sites web et de cours pour pouvoir le réaliser.
 
 		\subsection{Graphisme et Son}
 		\paragraph{}
@@ -166,7 +181,9 @@ utiliserons le C\# avec la plateforme Unity.\\
 	
 	\end{tabular}
 	\\
-	
+	\paragraph{}
+		Du fait que plusieurs personnes trvailleront sur une même tâche nous utiliserons git et gitub pour mettre notre travail en commun.
+
 	\section{Objectifs de rendu}
 	
 	\begin{tabular}{|*{4}{c|}}

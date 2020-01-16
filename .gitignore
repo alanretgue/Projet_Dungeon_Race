@@ -1,3 +1,8 @@
+*.toc
 *.pdf
 *.log
 *.aux
+*.hd
+*.out
+*.idx
+
