@@ -16,15 +16,15 @@ public class mouvement : MonoBehaviour
 
     public Vector3 velocity;
     bool isgrounded;
-    public Rigidbody rb;
+    public float jumpforce = 9.0f;
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        
     }
 
 
-    // Update is called once per frame
+    // Jump & Gravity : not checked
     void Update()
     {
         isgrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
@@ -35,13 +35,14 @@ public class mouvement : MonoBehaviour
         }
         else
         {           
-            velocity.y = 0f;
+            velocity.y = gravity * Time.deltaTime;
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                velocity.y = jumpforce;
+            }
         }
 
-        if (Input.GetButtonDown("Jump"))
-        {
-            rb.AddForce(new Vector3(0f, 1000000000f, 0f), ForceMode.Impulse);
-        }
+        //Moove code : checked
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
