@@ -8,15 +8,14 @@ public class mouvement : MonoBehaviour
     public CharacterController controller;
 
     public float speed = 12f;
-    public float gravity = 9.81f;
+    public float gravity = 14.81f;
     public Transform groundCheck;
     public float groundDistance = 1f;
     public LayerMask groundMask;
-    public float jumpheight = 3f;
 
     public Vector3 velocity;
     bool isgrounded;
-    public float jumpforce = 9.0f;
+    public float jumpforce = 10.0f;
 
     private void Start()
     {
@@ -24,7 +23,7 @@ public class mouvement : MonoBehaviour
     }
 
 
-    // Jump & Gravity : not checked
+    // Jump & Gravity : checked
     void Update()
     {
         isgrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
@@ -35,7 +34,7 @@ public class mouvement : MonoBehaviour
         }
         else
         {           
-            velocity.y = gravity * Time.deltaTime;
+            velocity.y = -gravity * Time.deltaTime;
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 velocity.y = jumpforce;

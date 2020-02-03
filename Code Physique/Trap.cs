@@ -8,7 +8,16 @@ public class Trap : MonoBehaviour
     bool isOn = false;
 
     public GameObject Killzone;
+
+    public GameObject peaktrap;
+    public GameObject ball;
+    public GameObject arrow;
     
+    void Start ()
+    {
+       this.velocity = velocity.y;
+       this.damage = damage; 
+    }
 
     // Active selon la valeur de isOn et de randomTime la DeadZone
     void Update()
@@ -46,4 +55,10 @@ public class Trap : MonoBehaviour
     }
 
     // Attention pour que ce script marche il faut appliquer le Layer Player à l'objet joueur !!!!!
+
+
+    //J'essaye d'implémenter des pièges déjà ;)
+    
+    
+    public void peak (GameObject peaktrap, )
 }
